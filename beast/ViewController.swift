@@ -173,7 +173,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             y.beasted = true
             print(beastadd)
             items.remove(at: index.row)
-            
+            TableView.reloadData()
             do {
                 try managedObjectContext.save()
             } catch {
